@@ -207,7 +207,17 @@
     #agendar {
       background: linear-gradient(140deg, #052030 0%, var(--blue-dark) 50%, #093d30 100%);
     }
-    .appointment-wrap { max-width: 800px; margin: 0 auto; text-align: center; }
+    .appointment-wrap { max-width: 900px; margin: 0 auto; text-align: center; }
+    .btn-agendar {
+      display: inline-block; margin-top: 1rem;
+      padding: 1rem 2.5rem; border-radius: 50px;
+      background: #2dd4bf; color: #052030;
+      font-size: 1.1rem; font-weight: 700;
+      text-decoration: none; letter-spacing: .02em;
+      transition: transform .2s, box-shadow .2s;
+      box-shadow: 0 4px 24px rgba(45,212,191,.35);
+    }
+    .btn-agendar:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(45,212,191,.5); }
     .appointment-wrap .section-tag { color: #2dd4bf; }
     .appointment-wrap .section-title { color: #fff; }
     .appointment-wrap .section-sub { color: rgba(255,255,255,.62); margin: 0 auto 2.5rem; }
@@ -497,42 +507,9 @@
       
       <h2 class="section-title">Agenda tu asesoría gratuita</h2>
       <p class="section-sub">Platicamos 30 minutos sobre tu situación actual y te doy un panorama claro de qué opciones tienes. Gratis y sin presión.</p>
-      <form class="appointment-form" onsubmit="handleAppointment(event)">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="appt-name">Nombre completo</label>
-            <input type="text" id="appt-name" placeholder="Ej: Ana González" required />
-          </div>
-          <div class="form-group">
-            <label for="appt-phone">Teléfono / WhatsApp</label>
-            <input type="tel" id="appt-phone" placeholder="55 1234 5678" required />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label for="appt-service">¿En qué te puedo ayudar?</label>
-            <select id="appt-service">
-              <option value="">Selecciona un tema</option>
-              <option>Asesoría Retiro Ley 73 / 97</option>
-              <option>Plan de Retiro</option>
-              <option>Plan de Ahorro</option>
-              <option>Seguro de Vida</option>
-              <option>Seguro de Gastos Médicos</option>
-              <option>No sé, quiero orientación general</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="appt-date">Fecha preferida</label>
-            <input type="date" id="appt-date" />
-          </div>
-        </div>
-        <div class="form-group form-full">
-          <label for="appt-notes">Cuéntame un poco de tu situación (opcional)</label>
-          <textarea id="appt-notes" placeholder="Ej: Tengo 45 años, cotizo al IMSS y quiero saber qué pensión me toca..."></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Solicitar asesoría gratuita</button>
-        <p class="form-note">Te contactaré en menos de 24 horas para confirmar el horario.</p>
-      </form>
+      <a href="https://meet.dodrex.com/demo-asesor" target="_blank" rel="noopener noreferrer" class="btn-agendar">
+        Agenda tu cita gratuita
+      </a>
     </div>
   </section>
 
